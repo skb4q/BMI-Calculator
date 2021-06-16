@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Project4</string>
+
+    <string name="stringWeightIn">Enter Weight: </string>
+    <string name="stringHeightIn">Enter Height: </string>
+
+    <string name="stringLbs">lbs</string>
+    <string name="inLbs">Pounds</string>
+    <string name="stringFt">ft</string>
+    <string name="inFt">Feet</string>
+    <string name="stringIn">in</string>
+    <string name="inIn">Inches</string>
+
+    <string name="btnCalculate">Calculate</string>
+
+    <string name="stringBMI">BMI:</string>
+    <string name="stringBMIStatus">Status:</string>
+</resources>

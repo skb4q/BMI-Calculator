@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/stringWeightIn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="113dp"
+        android:text="@string/stringHeightIn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+
+    <TextView
+        android:id="@+id/txtFt"
+        android:layout_width="47dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="103dp"
+        android:text="@string/stringFt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/inFt"
+        app:layout_constraintTop_toBottomOf="@+id/inPounds" />
+
+    <TextView
+        android:id="@+id/txtIn"
+        android:layout_width="54dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="175dp"
+        android:text="@string/stringIn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/inIn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPounds"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/stringLbs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/inPounds"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inPounds"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="31dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:labelFor="@id/inPounds"
+        android:nextFocusDown="@id/inFt"
+        app:layout_constraintStart_toEndOf="@+id/txtWeight"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/inFt"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="93dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:labelFor="@id/inFt"
+        android:nextFocusDown="@id/inIn"
+        app:layout_constraintStart_toEndOf="@+id/txtHeight"
+        app:layout_constraintTop_toBottomOf="@+id/inPounds"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/inIn"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="92dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:labelFor="@id/inIn"
+        app:layout_constraintStart_toEndOf="@+id/txtFt"
+        app:layout_constraintTop_toBottomOf="@+id/inPounds"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="342dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/btnCalculate"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFt" />
+
+    <TextView
+        android:id="@+id/txtBMI"
+        android:layout_width="327dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/stringBMI"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtBMIStatus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBMIStatus"
+        android:layout_width="327dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/stringBMIStatus"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
